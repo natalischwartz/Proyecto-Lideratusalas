@@ -6,7 +6,7 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground:232.5 60.1% 20.6%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
@@ -75,16 +75,6 @@
     --sidebar-ring: 217.2 91.2% 59.8%}
 }
 
-@layer base {
-  * {
-    /* @apply border-border; */
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
-
 
 @layer base {
   * {
@@ -93,4 +83,11 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.hero-image{
+   background-image: linear-gradient(to top right, rgba(63, 62, 62, 0.8) 4%, rgba(63, 62, 62, 0) 107%), url(src/assets/hero-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: 10% 22%; */
 }
