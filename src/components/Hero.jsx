@@ -2,7 +2,6 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
-import heroImage from "@/assets/hero-image.jpg"; 
 
 const Hero = () => {
   // Función para hacer scroll suave a la sección de contacto

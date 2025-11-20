@@ -81,7 +81,7 @@ const Navbar = () => {
               onClick={() => scrollToSection("testimonials")}
               className="text-foreground hover:text-primary transition-smooth"
             >
-              Testimonios
+              Nuestros clientes
             </Button>
             <Button
               onClick={() => scrollToSection("contact")}
@@ -135,7 +135,7 @@ const Navbar = () => {
               className="w-full justify-start"
               onClick={() => scrollToSection("testimonials")}
             >
-              Testimonios
+              Nuestros clientes
             </Button>
             <Button
               className="w-full bg-gradient-to-br from-foreground to-primary"
