@@ -27,6 +27,7 @@ export default {
   				foreground: 'hsl(var(--primary-foreground))',
   				light: 'hsl(var(--primary-light))'
   			},
+			chart2:'hsl(var(--chart-2))',
   			secondary: {
   				DEFAULT: 'hsl(var(--secondary))',
   				foreground: 'hsl(var(--secondary-foreground))',
@@ -53,6 +54,7 @@ export default {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
   			},
+			
   			sidebar: {
   				DEFAULT: 'hsl(var(--sidebar-background))',
   				foreground: 'hsl(var(--sidebar-foreground))',
@@ -62,7 +64,8 @@ export default {
   				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
   				border: 'hsl(var(--sidebar-border))',
   				ring: 'hsl(var(--sidebar-ring))'
-  			}
+  			},
+
   		},
   		backgroundImage: {
   			'gradient-hero': 'var(--gradient-hero)',

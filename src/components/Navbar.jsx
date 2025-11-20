@@ -85,7 +85,7 @@ const Navbar = () => {
             </Button>
             <Button
               onClick={() => scrollToSection("contact")}
-              className="ml-4 bg-gradient-to-r from-secondary to-primary hover:shadow-medium transition-smooth"
+              className="ml-4 bg-gradient-to-br from-foreground to-primary hover:shadow-medium transition-smooth"
             >
               Contacto
             </Button>
@@ -138,7 +138,7 @@ const Navbar = () => {
               Testimonios
             </Button>
             <Button
-              className="w-full bg-gradient-to-r from-secondary to-primary"
+              className="w-full bg-gradient-to-br from-foreground to-primary"
               onClick={() => scrollToSection("contact")}
             >
               Contacto
