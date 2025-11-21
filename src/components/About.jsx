@@ -1,28 +1,25 @@
-import { Target, Users, TrendingUp, Award } from "lucide-react";
+import photo1 from "../assets/Ivana-foto.PNG"
+import photo2 from "../assets/Paula-foto.PNG"
+import photo3 from "../assets/Valeria-foto.PNG"
 import { Card } from "@/components/ui/card";
 
 const About = () =>{
 
    const values = [
     {
-      icon: Target,
-      title: "Enfoque Personalizado",
+      image: photo1,
+      title: "Ivana Wowczuk",
       description: "Cada cliente es único. Adaptamos nuestras estrategias a tus necesidades específicas.",
     },
     {
-      icon: Users,
-      title: "Experiencia Comprobada",
+      image: photo2,
+      title: "Paula Rodriguez Carletti",
       description: "Más de 15 años ayudando a empresas y líderes a alcanzar sus objetivos.",
     },
     {
-      icon: TrendingUp,
-      title: "Resultados Medibles",
+      image: photo3,
+      title: "Valeria V. Pereyra",
       description: "Nos enfocamos en lograr resultados concretos y cuantificables para tu negocio.",
-    },
-    {
-      icon: Award,
-      title: "Excelencia Garantizada",
-      description: "Comprometidos con los más altos estándares de calidad en cada proyecto.",
     },
   ];
 
@@ -62,9 +59,13 @@ const About = () =>{
               key={index}
               className="p-6 text-center hover:shadow-large transition-smooth group"
             >
-              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-foreground to-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-smooth">
-                <value.icon className="w-8 h-8 text-white" />
-              </div>
+            <div className="w-24 h-24 mx-auto mb-4 rounded-full flex items-center justify-center group-hover:scale-110 transition-smooth overflow-hidden">
+              <img 
+                  src={value.image} 
+                  alt={value.title} 
+                  className="object-cover w-full h-full" 
+              />
+            </div>
               <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3">
                 {value.title}
               </h3>
