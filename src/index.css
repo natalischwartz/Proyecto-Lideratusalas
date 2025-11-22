@@ -86,9 +86,68 @@
   }
 }
 
-.hero-image{
-   background-image: linear-gradient(to top right, rgba(63, 62, 62, 0.8) 4%, rgba(63, 62, 62, 0) 107%), url(/hero-image.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* background-position: 10% 22%; */
+.div-hero-image {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  overflow: hidden;
 }
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center;
+}
+
+/* Overlay para el degradado */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* Texto por encima */
+.content {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 2rem;
+  z-index: 10;
+  padding-inline: 1rem;
+}
+
+@media (max-width: 640px) {
+   #hero {
+    height: 95vh; /* misma altura que damos a la imagen */
+  }
+
+  .div-hero-image{
+    height: 95vh; /* lo mismo que el hero */
+
+  }
+
+   .hero-img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: unset; /* importante: dejamos que los 95vh manden */
+    object-fit: cover; /* QUEDE ASÍ */
+    object-position: center top;
+  }
+
+  .overlay{
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+  }
+}
+
+
+
+
+

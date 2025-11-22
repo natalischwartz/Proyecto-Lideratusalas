@@ -29,37 +29,37 @@ const About = () =>{
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-['Playfair_Display'] text-foreground mb-4">
-            Quiénes Somos
+            Quiénes somos
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-foreground to-chart2 mx-auto mb-6"></div>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Somos un equipo de consultores y coaches profesionales dedicados a transformar 
-            empresas y desarrollar líderes excepcionales.
+           Somos un equipo de profesionales, multidisciplinario, formadas académicamente en el ámbito de la
+          Psicología, el Turismo, las Relaciones Laborales, el Counseling y el Coaching Ontológico Organizacional.
+          Además nos desempeñamos actualmente como Tripulantes de Cabina de Pasajeros con más de 20
+          años en el área y estamos vinculadas al área de Capacitación en Factores Humanos y Soft Skills
+          (Habilidades blandas).
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto mb-12 sm:mb-16">
           <Card className="p-6 sm:p-8 lg:p-10 shadow-medium">
             <p className="text-base sm:text-lg text-foreground leading-relaxed mb-6">
-              Con más de 15 años de experiencia en el sector empresarial, hemos ayudado a 
-              cientos de organizaciones a superar sus desafíos más complejos y alcanzar 
-              nuevos niveles de éxito.
-            </p>
-            <p className="text-base sm:text-lg text-foreground leading-relaxed">
-              Nuestra filosofía se basa en la creencia de que cada empresa tiene un potencial 
-              único por descubrir. A través de metodologías probadas y un enfoque personalizado, 
-              trabajamos codo a codo contigo para convertir tu visión en realidad.
+              Diseñamos a medida espacios de formación, capacitación y acompañamiento en procesos individuales
+              y grupales, con distintos ejes de abordaje (individual, social y empresarial) para organizaciones,
+              empresas o líderes en progreso.
+              Usamos plataformas virtuales para nuestros encuentros, dinámicas vivenciales y propuestas
+              innovadoras.
             </p>
           </Card>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {values.map((value, index) => (
             <Card
               key={index}
               className="p-6 text-center hover:shadow-large transition-smooth group"
             >
-            <div className="w-24 h-24 mx-auto mb-4 rounded-full flex items-center justify-center group-hover:scale-110 transition-smooth overflow-hidden">
+            <div className="w-28 h-28 mx-auto mb-4 rounded-full flex items-center justify-center group-hover:scale-110 transition-smooth overflow-hidden">
               <img 
                   src={value.image} 
                   alt={value.title} 
