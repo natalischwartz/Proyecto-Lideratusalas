@@ -116,9 +116,12 @@
 .content {
   position: absolute;
   inset-inline: 0;
-  bottom: 2rem;
+  bottom: 1.1rem;
   z-index: 10;
-  padding-inline: 1rem;
+}
+
+.title-container{
+  margin-bottom:2rem;
 }
 
 @media (max-width: 640px) {
@@ -135,6 +138,10 @@
     transform: none !important;
     transition: none !important;
      }
+
+    .title-container{
+    margin-bottom:1rem;
+}
 
   }
 
