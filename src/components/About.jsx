@@ -63,7 +63,7 @@ const About = () =>{
               <img 
                   src={value.image} 
                   alt={value.title} 
-                  className="object-cover w-full h-full" 
+                  className="object-cover object-[4%_25%] w-full h-full" 
               />
             </div>
               <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3">
