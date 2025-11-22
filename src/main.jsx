@@ -10,6 +10,7 @@ import AOS from 'aos';
 AOS.init({
   // Opciones globales, ej:
   duration: 1000, // Duración de la animación en ms
+  once: false,     // Animar solo una vez al hacer scroll hacia abajo
 });
 
 createRoot(document.getElementById('root')).render(

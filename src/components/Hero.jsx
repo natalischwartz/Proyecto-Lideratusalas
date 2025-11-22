@@ -13,7 +13,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className=" relative min-h-screen z-5 flex flex-col justify-end overflow-hidden pt-20 sm:pt-24">
+    <section id="hero" className=" relative z-5 flex flex-col justify-end overflow-hidden pt-20 sm:pt-24">
       {/* Background Image with Overlay */}
       <div className="div-hero-image relative">
 
@@ -26,15 +26,15 @@ const Hero = () => {
        <div className="overlay"></div>
 
          {/*  Hero Content */}
-        <div className="max-w-3xl content inset-x-0 bottom-8 px-4 sm:px-6 lg:px-8 z-10">
+        <div className="max-w-3xl content inset-x-0 bottom-4 px-4 sm:px-6 lg:px-8 z-10">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-['Playfair_Display'] text-white mb-4">
               Lorem ipsum
             </h1>
             <div>
-              <p className='text-lg sm:text-xl lg:text-2xl text-white/90 mb-6 max-w-2xl'>
+              {/* <p className='text-lg sm:text-xl lg:text-2xl text-white/90 mb-6 max-w-2xl'>
                 Consultoría estratégica y sistémica en factores humanos
               </p>
-              
+               */}
             </div>
             <div className="">
                 <Button
@@ -46,7 +46,7 @@ const Hero = () => {
                 }}
                 id="border-2 border-white text- hover:bg-white hover:text-primary transition-smooth text-base sm:text-lg px-6 sm:px-8 py-6 sm:py-7"
               >
-                Conoce Nuestros Servicios
+                Nuestros Servicios
               </Button>
               {/* <Button
                 size="lg"
