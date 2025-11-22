@@ -138,6 +138,12 @@
 
   }
 
+  @media (min-width:768px ){
+    .logo-medio{
+      display:none;
+    }
+
+  }
 
 
 

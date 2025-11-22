@@ -52,6 +52,14 @@ const Navbar = () => {
             <img src={logoImage} alt="Logo de Lidera tus alas" className="h-10 sm:h-16 w-auto" />
           </div>
 
+          {/* Lidera tus Alas */}
+          <div className="logo-medio">
+             <h1 className="text-xl font-bold font-['Playfair_Display'] bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+                    Lidera tus Alas
+              </h1>
+          </div>
+          
+
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-1 lg:space-x-2">
             {/* Los botones usan la función scrollToSection directamente */}
@@ -108,7 +116,7 @@ const Navbar = () => {
               <SheetContent side="right" className="w-[280px]">
                 <SheetHeader>
                   <SheetTitle className="text-xl font-bold font-['Playfair_Display'] bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
-                    Lidera tus alas
+                    Lidera tus Alas
                   </SheetTitle>
                 </SheetHeader>
                 <div className="mt-8 space-y-2">

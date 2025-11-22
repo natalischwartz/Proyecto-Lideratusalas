@@ -27,14 +27,15 @@ const Hero = () => {
 
          {/*  Hero Content */}
         <div className="max-w-3xl content inset-x-0 bottom-4 px-4 sm:px-6 lg:px-8 z-10">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-['Playfair_Display'] text-white mb-4">
+            {/* <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-['Playfair_Display'] text-white mb-4">
               Lorem ipsum
-            </h1>
+            </h1> */}
             <div>
-              {/* <p className='text-lg sm:text-xl lg:text-2xl text-white/90 mb-6 max-w-2xl'>
-                Consultoría estratégica y sistémica en factores humanos
+              <p className='text-lg sm:text-xl lg:text-2xl text-white/90 mb-6 max-w-2xl font-bold'>
+                Consultoría estratégica <br />
+                 y sistémica en factores humanos
               </p>
-               */}
+              
             </div>
             <div className="">
                 <Button

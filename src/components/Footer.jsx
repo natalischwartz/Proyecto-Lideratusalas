@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <h3 className="text-2xl font-bold font-['Playfair_Display'] mb-4">
-              Lidera tus alas
+              Lidera tus Alas
             </h3>
             <p className="text-primary-foreground/80 mb-4">
               Transformando negocios y desarrollando líderes excepcionales desde 2008.
@@ -83,7 +83,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-primary-foreground/80 text-sm">
-              © {currentYear} Lidera tus alas. Todos los derechos reservados.
+              © {currentYear} Lidera tus Alas. Todos los derechos reservados.
             </p>
             <span className="text-sm text-primary-foreground/30">Developed by NataliSch</span>
             <div className="flex gap-3">
