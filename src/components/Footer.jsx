@@ -109,22 +109,7 @@ const Footer = () => {
                 asChild
               >
                 <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook"
-                >
-                  <Facebook className="w-5 h-5" />
-                </a>
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="text-primary-foreground hover:text-primary-foreground hover:bg-primary-foreground/10"
-                asChild
-              >
-                <a
-                  href="linkedin.com/in/lidera-tus-alas-43a36b211"
+                  href="https://www.linkedin.com/in/lidera-tus-alas/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"

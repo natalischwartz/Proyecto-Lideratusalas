@@ -11,7 +11,11 @@ import Autoplay from "embla-carousel-autoplay";
 import logoJust from "@/assets/logo_just.png";
 import logoMacro from "@/assets/logo_macro.png";
 import logoUCA from "@/assets/logo_UCA.jpg";
-import logoPoen from "@/assets/logo_poen.png"
+import logoPoen from "@/assets/logo_poen.png";
+import logoNanotek from "@/assets/nanoteksa_logo.jpg";
+import logoLaAnonima from "@/assets/logo_anonima.jpg"
+import logoOmint from "@/assets/logo_omint.jpg";
+import logoUPE from "@/assets/logo_UPE.png";
 
 const Testimonials = () => {
   const testimonials = [
@@ -28,9 +32,26 @@ const Testimonials = () => {
       image: logoUCA,
     },
      {
+      name: "Supermercados La Anónima",
+      image: logoLaAnonima,
+    },
+     {
+      name: "Grupo Omint",
+      image: logoOmint,
+    },
+     {
       name: "Laboratorio Poen",
       image: logoPoen,
     },
+     {
+      name: "Nanotek S.A.",
+      image: logoNanotek,
+    },
+    {
+      name: "Universidad Provincial de Ezeiza",
+      image: logoUPE,
+    },
+
   ];
 
    return (
@@ -65,7 +86,7 @@ const Testimonials = () => {
                       <img
                         src={testimonial.image}
                         alt={testimonial.name}
-                        className="w-20 h-20 object-contain"
+                        className="w-24 h-24 object-contain"
                       />
                     </div>
                   </div>
