@@ -34,7 +34,7 @@ const About = () =>{
           <div className="w-24 h-1 bg-gradient-to-r from-foreground to-chart2 mx-auto mb-6"></div>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-2">Expertas en Potenciar el Factor Humano</p>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-7 md:leading-normal lg:leading-relaxed">
-           Somos un equipo de profesionales, multidisciplinario, formadas académicamente en el ámbito de la <strong>Psicología, el Turismo, las Relaciones Laborales, el Counseling y el Coaching Ontológico Organizacional.</strong>  Además nos desempeñamos actualmente como Tripulantes de Cabina de Pasajeros con más de strong 20 años en el área y estamos vinculadas al área de Capacitación en <strong>Factores Humanos y Soft Skills (Habilidades blandas).</strong> 
+           Somos un equipo de profesionales, multidisciplinario, formadas académicamente en el ámbito de la <strong>Psicología, el Turismo, las Relaciones Laborales, el Counseling y el Coaching Ontológico Organizacional.</strong>  Además nos desempeñamos actualmente como Tripulantes de Cabina de Pasajeros con más de 20 años en el área y estamos vinculadas al área de Capacitación en <strong>Factores Humanos y Soft Skills (Habilidades blandas).</strong> 
           </p>
         </div>
 
