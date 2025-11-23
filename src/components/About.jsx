@@ -9,17 +9,17 @@ const About = () =>{
     {
       image: photo1,
       title: "Ivana Wowczuk",
-      description: "Cada cliente es único. Adaptamos nuestras estrategias a tus necesidades específicas.",
+      description: "Lic. en Relaciones Laborales | Coach ontológico, vocacional y organizacional | Facilitadora en FF.HH y Gestión de la seguridad en aviación | Master Trainer en TeamStepps | Docente de la Universidad Provincial de Ezeiza | Docente de Programa para Empresas UCA.",
     },
     {
       image: photo2,
       title: "Paula Rodriguez Carletti",
-      description: "Más de 15 años ayudando a empresas y líderes a alcanzar sus objetivos.",
+      description: "Lic. en Turismo | Facilitadora en FF.HH, CRM, TEM Y SMS | Coach ontológico Profesional y Liderazgo | Tripulante de Cabina de Pasajeros | Jefa de Cabina del área internacional | Asistencia social a grupos vulnerables y de bajos recursos (Asociación Civil Pequeños Pasos)",
     },
     {
       image: photo3,
       title: "Valeria V. Pereyra",
-      description: "Nos enfocamos en lograr resultados concretos y cuantificables para tu negocio.",
+      description: "Lic. en Psicología | Consultora psicológica | Especialización en Desarrollo Personal | Facilitadora en FF.HH. | Comisario de a bordo - Area internacional | Consultoría de FF.HH y Gestión de la seguridad.",
     },
   ];
 
@@ -59,17 +59,17 @@ const About = () =>{
               key={index}
               className="p-6 text-center hover:shadow-large transition-smooth group"
             >
-            <div className="w-28 h-28 mx-auto mb-4 rounded-full flex items-center justify-center group-hover:scale-110 transition-smooth overflow-hidden">
+            <div className="w-28 h-28 mx-auto mb-4 rounded-full border border-gray-400 flex items-center justify-center group-hover:scale-110 transition-smooth overflow-hidden">
               <img 
                   src={value.image} 
                   alt={value.title} 
-                  className="object-cover object-[4%_25%] w-full h-full" 
+                  className="object-cover w-full h-full" 
               />
             </div>
               <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3">
                 {value.title}
               </h3>
-              <p className="text-sm sm:text-base text-muted-foreground">
+              <p className="text-sm sm:text-base text-muted-foreground" style={{ whiteSpace: 'pre-line' }}>
                 {value.description}
               </p>
             </Card>
