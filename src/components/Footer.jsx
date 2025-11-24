@@ -104,6 +104,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        <div className="border-t border-primary-foreground/20 pt-8"></div>
 
         {/* Copyright */}
         <div className="flex justify-center">
