@@ -133,11 +133,12 @@
     height:100%;
   }
 
-     [data-aos]{
-       opacity: 1 !important;
+     [data-aos]:not(.ejes-animados):not(.ejes-animados *) {
+    opacity: 1 !important;
     transform: none !important;
     transition: none !important;
-     }
+  }
+
 
     .title-container{
     margin-bottom:1rem;

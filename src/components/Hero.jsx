@@ -31,7 +31,7 @@ const Hero = () => {
               Lorem ipsum
             </h1> */}
             <div className='title-container'>
-              <p className='text-lg sm:text-xl lg:text-4xl tracking-wide text-white/90 max-w-2xl font-bold'>
+              <p className='text-lg sm:text-xl lg:text-4xl tracking-wider text-white/90 max-w-2xl font-bold'>
                 Consultoría estratégica <br />
                  y sistémica en factores humanos
               </p>

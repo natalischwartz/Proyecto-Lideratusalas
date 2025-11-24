@@ -38,18 +38,6 @@ const About = () =>{
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto mb-12 sm:mb-16">
-          <Card className="p-6 sm:p-8 lg:p-10 shadow-medium">
-            <p className="text-base sm:text-lg text-foreground leading-relaxed mb-6">
-              Diseñamos a medida espacios de formación, capacitación y acompañamiento en procesos individuales
-              y grupales, con distintos ejes de abordaje (individual, social y empresarial) para organizaciones,
-              empresas o líderes en progreso.
-              Usamos plataformas virtuales para nuestros encuentros, dinámicas vivenciales y propuestas
-              innovadoras.
-            </p>
-          </Card>
-        </div>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {values.map((value, index) => (
             <Card
