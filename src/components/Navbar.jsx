@@ -49,7 +49,7 @@ const Navbar = () => {
           
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img src={logoImage} alt="Logo de Lidera tus alas" className="h-10 sm:h-16 w-auto" />
+            <img src={logoImage} alt="Logo de Lidera tus alas" className="h-16 sm:h-18 w-auto" />
           </div>
 
           {/* Lidera tus Alas */}
@@ -75,7 +75,7 @@ const Navbar = () => {
               onClick={() => scrollToSection("about")}
               className="text-foreground hover:text-primary transition-smooth"
             >
-              Quiénes somos
+              Quienes somos
             </Button>
             <Button
               variant="ghost"
@@ -133,7 +133,7 @@ const Navbar = () => {
                     className="w-full justify-start"
                     onClick={() => scrollToSection("about")}
                   >
-                    Quiénes somos
+                    Quienes somos
                   </Button>
                   <Button
                     variant="ghost"

@@ -16,6 +16,7 @@ import logoNanotek from "@/assets/nanoteksa_logo.jpg";
 import logoLaAnonima from "@/assets/logo_anonima.jpg"
 import logoOmint from "@/assets/logo_omint.jpg";
 import logoUPE from "@/assets/logo_UPE.png";
+import logoFrances from "@/assets/logo_BcoFrances.png"
 
 const Testimonials = () => {
   const testimonials = [
@@ -26,6 +27,10 @@ const Testimonials = () => {
     {
       name: "Banco Macro",
       image: logoMacro,
+    },
+    {
+      name: "Banco Francés",
+      image: logoFrances,
     },
     {
       name: "Universidad Católica Argentina",

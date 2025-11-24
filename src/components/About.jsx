@@ -29,7 +29,7 @@ const About = () =>{
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-['Playfair_Display'] text-foreground mb-4">
-            Quiénes somos
+            Quienes somos
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-foreground to-chart2 mx-auto mb-6"></div>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-2">Expertas en Potenciar el Factor Humano</p>
