@@ -48,9 +48,17 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 sm:h-20">
           
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <img src={logoImage} alt="Logo de Lidera tus alas" className="h-16 sm:h-18 w-auto" />
-          </div>
+        <a href="#" className="flex-shrink-0"
+        onClick={(e) => {
+        e.preventDefault(); // evita el salto instantáneo
+        window.scrollTo({ top: 0, behavior: "smooth" })
+        }}>
+          <img
+            src={logoImage}
+            alt="Logo de Lidera tus alas"
+            className="h-16 sm:h-18 w-auto cursor-pointer"
+          />
+        </a>
 
           {/* Lidera tus Alas */}
           <div className="logo-medio">
@@ -79,7 +87,7 @@ const Navbar = () => {
             </Button>
             <Button
               variant="ghost"
-              onClick={() => scrollToSection("services")}
+              onClick={() => scrollToSection("lista-servicios")}
               className="text-foreground hover:text-primary transition-smooth"
             >
               Servicios
@@ -138,7 +146,7 @@ const Navbar = () => {
                   <Button
                     variant="ghost"
                     className="w-full justify-start"
-                    onClick={() => scrollToSection("services")}
+                    onClick={() => scrollToSection("lista-servicios")}
                   >
                     Servicios
                   </Button>

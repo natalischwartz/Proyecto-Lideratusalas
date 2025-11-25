@@ -70,7 +70,7 @@ const Services = () => {
         <EjesAbordaje/>
         </div>
         {/* Services */}
-         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8" id="lista-servicios">
           {services.map((service, index) => (
             <Card
               key={index}

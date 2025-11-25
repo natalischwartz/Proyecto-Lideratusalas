@@ -42,7 +42,7 @@ const Hero = () => {
                 size="lg"
                 variant="outline"
                 onClick={() => {
-                  const element = document.getElementById("services");
+                  const element = document.getElementById("lista-servicios");
                   if (element) element.scrollIntoView({ behavior: "smooth" });
                 }}
                 id="border-2 border-white text- hover:bg-white hover:text-primary transition-smooth text-base sm:text-lg px-6 sm:px-8 py-6 sm:py-7"
