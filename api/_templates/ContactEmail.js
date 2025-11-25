@@ -10,7 +10,7 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 
-export function ContactEmail({ nombre, email, mensaje }) {
+export function ContactEmail({ nombre, email, telefono, mensaje }) {
   return React.createElement(Html, null,
     React.createElement(Head),
     React.createElement(Body, { style: main },
@@ -22,6 +22,8 @@ export function ContactEmail({ nombre, email, mensaje }) {
           React.createElement(Text, { style: value }, nombre),
           React.createElement(Text, { style: label }, "Email:"),
           React.createElement(Text, { style: value }, email),
+          React.createElement(Text, { style: label }, "Teléfono:"),
+          React.createElement(Text, { style: value }, telefono),
           React.createElement(Text, { style: label }, "Mensaje:"),
           React.createElement(Text, { style: value }, mensaje)
         ),
