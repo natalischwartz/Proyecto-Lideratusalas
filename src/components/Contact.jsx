@@ -43,31 +43,37 @@ const Contact = () => {
   const handleSubmit = async (e) => {
   e.preventDefault();
   setIsSubmitting(true);
-
-     try {
-    const res = await fetch("/api/send-email.js", {
+   try {
+    const response = await fetch("/api/send-email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        ...formData,
-        countryCode,
+        name: formData.name,
+        email: formData.email,
+        phone: countryCode + formData.phone,
+        message: formData.message,
       }),
     });
 
-    if (res.ok) {
-      toast({ title: "Mensaje enviado con éxito" });
+    const result = await response.json();
+
+    if (result.success) {
+      toast({ title: "Mensaje enviado correctamente" });
       setFormData({ name: "", email: "", phone: "", message: "" });
     } else {
-      toast({ title: "Error al enviar el mensaje", variant: "destructive" });
+      toast({ title: "Hubo un error", variant: "destructive" });
     }
   } catch (error) {
-    toast({ title: "Error inesperado", variant: "destructive" });
-  } finally {
-    setIsSubmitting(false);
+    toast({ title: "Error enviando mensaje", variant: "destructive" });
   }
+
+  setIsSubmitting(false);
+  
 };
+
+
 
   const handleChange = (e) => {
   setFormData({
