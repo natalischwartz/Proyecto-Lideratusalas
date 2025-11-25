@@ -8,12 +8,13 @@ import {Card} from "@/components/ui/card";
       title: "Qué Ofrecemos",
       color: "from-accent to-accent-light",
       items: [
-        "Consultoría estratégica empresarial",
-        "Coaching ejecutivo y de liderazgo",
-        "Desarrollo organizacional",
+        "Consultoría de RR.HH y empresarial",
+        "Coaching para la vida",
+        "Desarrollo de liderazgo",
         "Mentoring profesional personalizado",
-        "Planificación estratégica",
+        "Preparación de entrevistas",
         "Gestión del cambio organizacional",
+        "Formación de directivos"
       ],
     },
     {
