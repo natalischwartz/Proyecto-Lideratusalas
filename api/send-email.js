@@ -1,43 +1,54 @@
 import { Resend } from "resend";
+import { render } from "@react-email/render";
+import { ContactEmail } from "./_templates/ContactEmail.js";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
+    return res.status(405).json({ error: "Método no permitido" });
   }
 
   try {
-    // Leer body crudo
-    const rawBody = await getRawBody(req);
-    const body = JSON.parse(rawBody);
+    const { destinatario, nombre, email, mensaje } = req.body;
 
-    const { name, email, message } = body;
+    if (!destinatario || !nombre || !email || !mensaje) {
+      return res.status(400).json({
+        success: false,
+        error: "Todos los campos son requeridos",
+      });
+    }
 
-    const resend = new Resend(process.env.RESEND_API_KEY);
+    const emailHtml = await render(ContactEmail({ nombre, email, mensaje }));
 
-    const data = await resend.emails.send({
-      from: "no-reply@lideratusalas.com.ar",
-      to: "schwartznatali@gmail.com",
-      subject: "Nuevo mensaje desde el formulario",
-      html: `
-        <h2>Nuevo Mensaje</h2>
-        <p><b>Nombre:</b> ${name}</p>
-        <p><b>Email:</b> ${email}</p>
-        <p><b>Mensaje:</b> ${message}</p>
-      `,
+    const { data, error } = await resend.emails.send({
+      from: process.env.EMAIL_FROM || "Contacto <onboarding@resend.dev>",
+      to: destinatario,
+      replyTo: email,
+      subject: `Nuevo mensaje de ${nombre}`,
+      html: emailHtml,
     });
 
-    return res.status(200).json({ status: "Email enviado", data });
-  } catch (error) {
-    console.error("ERROR ENVIANDO EMAIL:", error);
-    return res.status(500).json({ error: "Error enviando email" });
-  }
-}
+    if (error) {
+      console.error("Error Resend:", error);
+      return res.status(500).json({
+        success: false,
+        error: "Error al enviar el email",
+        details: error.message,
+      });
+    }
 
-function getRawBody(req) {
-  return new Promise((resolve, reject) => {
-    let data = "";
-    req.on("data", chunk => (data += chunk));
-    req.on("end", () => resolve(data));
-    req.on("error", err => reject(err));
-  });
+    return res.status(200).json({
+      success: true,
+      message: "Email enviado correctamente",
+      id: data.id,
+    });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({
+      success: false,
+      error: "Error al enviar el email",
+      details: error.message,
+    });
+  }
 }

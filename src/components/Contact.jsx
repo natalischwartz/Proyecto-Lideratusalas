@@ -44,34 +44,34 @@ const Contact = () => {
   e.preventDefault();
   setIsSubmitting(true);
 
-  try {
-    const resp = await fetch("/api/send-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: formData.name,
-        email: formData.email,
-        message: formData.message,
-      }),
-    });
+    e.preventDefault()
+    setLoading(true)
+    setStatus({ type: '', message: '' })
 
-    const data = await resp.json();
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
 
-    if (!resp.ok) throw new Error("Error al enviar");
+      const data = await response.json()
 
-    toast({
-      title: "Mensaje enviado",
-      description: "Gracias por contactarnos.",
-    });
-  } catch (err) {
-    toast({
-      title: "Error",
-      description: "Hubo un problema enviando el mensaje.",
-      variant: "destructive",
-    });
-  } finally {
-    setIsSubmitting(false);
-  }
+      if (data.success) {
+        setStatus({ type: 'success', message: 'Email enviado correctamente!' })
+        setFormData({ destinatario: '', nombre: '', email: '', mensaje: '' })
+      } else {
+        setStatus({ type: 'error', message: data.error || 'Error al enviar' })
+      }
+    } catch (error) {
+      setStatus({ type: 'error', message: 'Error de conexión con el servidor' })
+    } finally {
+      setLoading(false)
+    }
+
+  
 };
 
 
