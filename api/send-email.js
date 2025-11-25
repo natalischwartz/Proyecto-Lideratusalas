@@ -1,13 +1,15 @@
 import { Resend } from "resend";
 
-export default async function handler(request, response) {
-  if (request.method !== "POST") {
-    return response.status(405).json({ error: "Method not allowed" });
+export default async function handler(req, res) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
   }
 
   try {
-    // Parsear el body manualmente si Vercel no lo hace
-    const body = request.body || JSON.parse(await getRawBody(request));
+    // Leer body crudo
+    const rawBody = await getRawBody(req);
+    const body = JSON.parse(rawBody);
+
     const { name, email, message } = body;
 
     const resend = new Resend(process.env.RESEND_API_KEY);
@@ -24,15 +26,14 @@ export default async function handler(request, response) {
       `,
     });
 
-    return response.status(200).json({ status: "Email enviado", data });
+    return res.status(200).json({ status: "Email enviado", data });
   } catch (error) {
     console.error("ERROR ENVIANDO EMAIL:", error);
-    return response.status(500).json({ error: "Error enviando email" });
+    return res.status(500).json({ error: "Error enviando email" });
   }
 }
 
-// Necesario en Vercel + Vite para leer el body
-async function getRawBody(req) {
+function getRawBody(req) {
   return new Promise((resolve, reject) => {
     let data = "";
     req.on("data", chunk => (data += chunk));

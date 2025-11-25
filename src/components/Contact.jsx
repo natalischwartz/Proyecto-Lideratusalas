@@ -40,38 +40,40 @@ const Contact = () => {
   { code: "+598", iso: "UY", country: "Uruguay" },
   ];
 
-  const handleSubmit = async (e) => {
+ const handleSubmit = async (e) => {
   e.preventDefault();
   setIsSubmitting(true);
-   try {
-    const response = await fetch("/api/send-email", {
+
+  try {
+    const resp = await fetch("/api/send-email", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         name: formData.name,
         email: formData.email,
-        phone: countryCode + formData.phone,
         message: formData.message,
       }),
     });
 
-    const result = await response.json();
+    const data = await resp.json();
 
-    if (result.success) {
-      toast({ title: "Mensaje enviado correctamente" });
-      setFormData({ name: "", email: "", phone: "", message: "" });
-    } else {
-      toast({ title: "Hubo un error", variant: "destructive" });
-    }
-  } catch (error) {
-    toast({ title: "Error enviando mensaje", variant: "destructive" });
+    if (!resp.ok) throw new Error("Error al enviar");
+
+    toast({
+      title: "Mensaje enviado",
+      description: "Gracias por contactarnos.",
+    });
+  } catch (err) {
+    toast({
+      title: "Error",
+      description: "Hubo un problema enviando el mensaje.",
+      variant: "destructive",
+    });
+  } finally {
+    setIsSubmitting(false);
   }
-
-  setIsSubmitting(false);
-  
 };
+
 
 
 
