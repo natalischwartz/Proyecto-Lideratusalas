@@ -40,6 +40,41 @@ const Contact = () => {
   { code: "+598", iso: "UY", country: "Uruguay" },
   ];
 
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+
+     try {
+    const res = await fetch("/api/send-email.js", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        ...formData,
+        countryCode,
+      }),
+    });
+
+    if (res.ok) {
+      toast({ title: "Mensaje enviado con éxito" });
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    } else {
+      toast({ title: "Error al enviar el mensaje", variant: "destructive" });
+    }
+  } catch (error) {
+    toast({ title: "Error inesperado", variant: "destructive" });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
+  const handleChange = (e) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value,
+  });
+};
  return (
     <section id="contact" className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,7 +91,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 lg:gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
           <Card className="p-6 sm:p-8 shadow-medium">
-            <form  className="space-y-6">
+            <form  className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <Label htmlFor="name">Nombre completo *</Label>
                 <Input
@@ -64,9 +99,9 @@ const Contact = () => {
                   name="name"
                   type="text"
                   required
-                  
-                  
-                  placeholder="Tu nombre"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Nombre"
                   className="mt-2"
                 />
               </div>
@@ -77,8 +112,8 @@ const Contact = () => {
                   name="email"
                   type="email"
                   required
-                  
-              
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="tu@email.com"
                   className="mt-2"
                 />
@@ -121,7 +156,8 @@ const Contact = () => {
                     id="phone"
                     name="phone"
                     type="tel"
-
+                    value={formData.phone}
+                    onChange={handleChange}
                     placeholder="11 1234 5678"
                     className="flex-1"
                   />
@@ -133,8 +169,8 @@ const Contact = () => {
                   id="message"
                   name="message"
                   required
-          
-              
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Contanos sobre tu negocio y cómo podemos ayudarte..."
                   rows={5}
                   className="mt-2"
@@ -142,66 +178,20 @@ const Contact = () => {
               </div>
               <Button
                 type="submit"
+                disabled={isSubmitting}
                 className="w-full bg-gradient-to-r from-foreground to-primary hover:shadow-large transition-smooth text-base sm:text-lg py-6"
               >
-                    Enviar Mensaje
+                {isSubmitting ?(
+                  "Enviando..."
+                ) : (
+                  <>
+                  Enviar Mensaje
                     <Send className="ml-2 w-5 h-5" />
+                  </>
+                )}
               </Button>
             </form>
           </Card>
-
-          {/* Contact Info */}
-          {/* <div className="space-y-6">
-            <Card className="p-6 sm:p-8 hover:shadow-medium transition-smooth">
-              <div className="flex items-start">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                  <Mail className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground text-lg mb-2">Email</h3>
-                  <a
-                    href="mailto:contacto@consultoriapro.com"
-                    className="text-muted-foreground hover:text-primary transition-smooth"
-                  >
-                    lideratusalas@gmail.com
-                  </a>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="p-6 sm:p-8 hover:shadow-medium transition-smooth">
-              <div className="flex items-start">
-                <div className="w-12 h-12 bg-gradient-to-br from-secondary to-accent rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                  <Phone className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground text-lg mb-2">Teléfono</h3>
-                  <a
-                    href="tel:+34900000000"
-                    className="text-muted-foreground hover:text-primary transition-smooth"
-                  >
-                   +54 9 11 4937 9204
-                  </a>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="p-6 sm:p-8 hover:shadow-medium transition-smooth">
-              <div className="flex items-start">
-                <div className="w-12 h-12 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground text-lg mb-2">Ubicación</h3>
-                  <p className="text-muted-foreground">
-                    Buenos Aires, Argentina
-                    <br />
-                    Atención online y presencial
-                  </p>
-                </div>
-              </div>
-            </Card>
-          </div> */}
         </div>
       </div>
     </section>
