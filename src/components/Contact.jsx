@@ -44,32 +44,44 @@ const Contact = () => {
   e.preventDefault();
   setIsSubmitting(true);
 
-    e.preventDefault()
-    setLoading(true)
-    setStatus({ type: '', message: '' })
+     try {
+    const response = await fetch('/api/send-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        nombre: formData.name,
+        email: formData.email,
+        telefono: `${countryCode} ${formData.phone}`,
+        mensaje: formData.message,
+      }),
+    });
 
-    try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
+    const data = await response.json();
 
-      const data = await response.json()
-
-      if (data.success) {
-        setStatus({ type: 'success', message: 'Email enviado correctamente!' })
-        setFormData({ destinatario: '', nombre: '', email: '', mensaje: '' })
-      } else {
-        setStatus({ type: 'error', message: data.error || 'Error al enviar' })
-      }
-    } catch (error) {
-      setStatus({ type: 'error', message: 'Error de conexión con el servidor' })
-    } finally {
-      setLoading(false)
+    if (data.success) {
+      toast({
+        title: "¡Mensaje enviado!",
+        description: "Nos pondremos en contacto contigo pronto.",
+      });
+      setFormData({ name: '', email: '', phone: '', message: '' });
+    } else {
+      toast({
+        title: "Error",
+        description: data.error || "Error al enviar el mensaje",
+        variant: "destructive",
+      });
     }
+  } catch (error) {
+    toast({
+      title: "Error",
+      description: "Error de conexión con el servidor",
+      variant: "destructive",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
 
   
 };

@@ -10,16 +10,25 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { destinatario, nombre, email, mensaje } = req.body;
+    const { nombre, email, telefono, mensaje } = req.body;
 
-    if (!destinatario || !nombre || !email || !mensaje) {
+    if (!nombre || !email || !mensaje) {
       return res.status(400).json({
         success: false,
-        error: "Todos los campos son requeridos",
+        error: "Nombre, email y mensaje son requeridos",
       });
     }
 
-    const emailHtml = await render(ContactEmail({ nombre, email, mensaje }));
+    const destinatario = process.env.EMAIL_TO;
+    if (!destinatario) {
+      console.error("EMAIL_TO no está configurado");
+      return res.status(500).json({
+        success: false,
+        error: "Error de configuración del servidor",
+      });
+    }
+
+    const emailHtml = await render(ContactEmail({ nombre, email, telefono, mensaje }));
 
     const { data, error } = await resend.emails.send({
       from: process.env.EMAIL_FROM || "Contacto <onboarding@resend.dev>",
