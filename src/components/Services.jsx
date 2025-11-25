@@ -1,5 +1,48 @@
+import { Lightbulb, Cog, Target } from "lucide-react";
 import EjesAbordaje from "./EjesDeAbordaje";
-import {Card} from "@/components/ui/card"
+import {Card} from "@/components/ui/card";
+
+ const services = [
+    {
+      icon: Lightbulb,
+      title: "Qué Ofrecemos",
+      color: "from-accent to-accent-light",
+      items: [
+        "Consultoría estratégica empresarial",
+        "Coaching ejecutivo y de liderazgo",
+        "Desarrollo organizacional",
+        "Mentoring profesional personalizado",
+        "Planificación estratégica",
+        "Gestión del cambio organizacional",
+      ],
+    },
+    {
+      icon: Cog,
+      title: "Cómo Trabajamos",
+      color: "from-primary to-primary-light",
+      items: [
+        "Diagnóstico inicial exhaustivo",
+        "Diseño de estrategias personalizadas",
+        "Implementación con acompañamiento continuo",
+        "Medición de resultados y ajustes",
+        "Sesiones one-on-one y grupales",
+        "Seguimiento y evaluación constante",
+      ],
+    },
+    {
+      icon: Target,
+      title: "Para Qué Sirve",
+      color: "from-secondary to-secondary-light",
+      items: [
+        "Mejorar el rendimiento empresarial",
+        "Desarrollar habilidades de liderazgo",
+        "Optimizar procesos y operaciones",
+        "Aumentar la productividad del equipo",
+        "Alcanzar objetivos estratégicos",
+        "Impulsar el crecimiento sostenible",
+      ],
+    },
+  ];
 
 const Services = () => {
 
@@ -25,6 +68,34 @@ const Services = () => {
                 </div>
         <EjesAbordaje/>
         </div>
+        {/* Services */}
+         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+          {services.map((service, index) => (
+            <Card
+              key={index}
+              className="p-6 sm:p-8 hover:shadow-large transition-smooth group"
+            >
+              <div className={`w-16 h-16 mb-6 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-smooth shadow-medium`}>
+                <service.icon className="w-8 h-8 text-chart2" />
+              </div>
+              <h3 className="text-xl sm:text-2xl font-bold font-['Playfair_Display'] text-foreground mb-4">
+                {service.title}
+              </h3>
+              <ul className="space-y-3">
+                {service.items.map((item, itemIndex) => (
+                  <li
+                    key={itemIndex}
+                    className="flex items-start text-sm sm:text-base text-muted-foreground"
+                  >
+                    <span className="inline-block w-1.5 h-1.5 bg-gradient-to-br from-primary to-secondary rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </Card>
+          ))}
+        </div>
+
 
         {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service, index) => (
@@ -66,10 +137,6 @@ const Services = () => {
         </div> */}
       </div>
     </section>
-        
-        
-        
-           
     )
 }
 
