@@ -23,7 +23,11 @@ export function ContactEmail({ nombre, email, telefono, mensaje }) {
           React.createElement(Text, { style: label }, "Email:"),
           React.createElement(Text, { style: value }, email),
           React.createElement(Text, { style: label }, "Teléfono:"),
-          React.createElement(Text, { style: value }, telefono),
+          React.createElement(
+            Text,
+            { style: value },
+            telefono?.trim() ? telefono : "No informado"
+          ),
           React.createElement(Text, { style: label }, "Mensaje:"),
           React.createElement(Text, { style: value }, mensaje)
         ),
