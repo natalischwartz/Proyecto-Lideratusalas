@@ -46,7 +46,7 @@ const Contact = () => {
 
 
      try {
-    const response = await fetch('/backend/send-mail', {
+    const response = await fetch('/api/send-mail', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

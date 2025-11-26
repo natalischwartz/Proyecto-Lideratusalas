@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import sendMail from "./send-mail.js";
+import sendMail from "../api/send-mail.js";
 
 dotenv.config();
 const app = express();
