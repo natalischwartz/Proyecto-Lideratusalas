@@ -16,7 +16,10 @@ import logoNanotek from "@/assets/nanoteksa_logo.jpg";
 import logoLaAnonima from "@/assets/logo_anonima.jpg"
 import logoOmint from "@/assets/logo_omint.jpg";
 import logoUPE from "@/assets/logo_UPE.png";
-import logoFrances from "@/assets/logo_BcoFrances.png"
+import logoFrances from "@/assets/logo_BcoFrances.png";
+import logoImpripost from "@/assets/logo_impripost.jpg";
+import logoSouthern from "@/assets/logo_southern.jpg";
+import logoService from "@/assets/logo_serviceManagement.jpg";
 
 const Testimonials = () => {
   const testimonials = [
@@ -56,6 +59,18 @@ const Testimonials = () => {
       name: "Universidad Provincial de Ezeiza",
       image: logoUPE,
     },
+     {
+      name: "Impripost",
+      image: logoImpripost,
+    },
+     {
+      name: "Southern Experience",
+      image: logoSouthern,
+    },
+    //  {
+    //   name: "Service Management",
+    //   image: logoService,
+    // },
 
   ];
 
@@ -71,7 +86,7 @@ const Testimonials = () => {
 
         <Carousel
           opts={{
-            align: "start",
+            align: "center",
             loop: true,
           }}
           plugins={[
@@ -84,14 +99,14 @@ const Testimonials = () => {
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                <Card className="p-6 sm:p-8 hover:shadow-large transition-smooth group relative h-full">
+                <Card className="p-6 sm:p-8 hover:shadow-large transition-smooth group relative h-full flex flex-col items-center">
                   <div className="relative z-10">
-                    <div className="flex items-center flex-col
-                    gap-4 justify-center">
+                    <div className="flex items-center
+                    justify-center w-28 h-28">
                       <img
                         src={testimonial.image}
                         alt={testimonial.name}
-                        className="w-24 h-24 object-contain"
+                        className="w-28 h-28 object-contain object-center"
                       />
                     </div>
                   </div>
@@ -99,8 +114,8 @@ const Testimonials = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden sm:flex" />
-          <CarouselNext className="hidden sm:flex" />
+          <CarouselPrevious className="flex sm:hidden absolute left-2 top-1/2 transform -translate-y-1/2" />
+          <CarouselNext className="flex sm:hidden absolute right-2 top-1/2 transform -translate-y-1/2" />
         </Carousel>
       </div>
     </section>

@@ -17,7 +17,7 @@ const Hero = () => {
       {/* Background Image with Overlay */}
       <div className="div-hero-image relative">
           <img 
-          src="/foto-portada.jpg" 
+          src="/foto-Hero.png" 
           alt="Hero"
           className="hero-img"
           />
