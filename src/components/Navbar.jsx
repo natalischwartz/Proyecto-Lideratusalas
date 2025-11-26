@@ -83,7 +83,7 @@ const Navbar = () => {
               onClick={() => scrollToSection("about")}
               className="text-foreground hover:text-primary transition-smooth"
             >
-              Quienes somos
+              Quiénes somos
             </Button>
             <Button
               variant="ghost"
@@ -141,7 +141,7 @@ const Navbar = () => {
                     className="w-full justify-start"
                     onClick={() => scrollToSection("about")}
                   >
-                    Quienes somos
+                    Quiénes somos
                   </Button>
                   <Button
                     variant="ghost"

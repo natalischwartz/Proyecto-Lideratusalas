@@ -35,7 +35,7 @@ const Footer = () => {
                   href="#about"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-smooth"
                 >
-                  Quienes somos
+                  Quiénes somos
                 </a>
               </li>
               <li>
