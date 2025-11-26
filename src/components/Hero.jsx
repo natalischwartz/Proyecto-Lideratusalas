@@ -13,15 +13,20 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className=" relative z-5 flex flex-col justify-end overflow-hidden pt-20 sm:pt-24">
+    <section id="hero" className=" relative z-5 min-h-screen flex flex-col justify-end overflow-hidden pt-20 sm:pt-24">
       {/* Background Image with Overlay */}
       <div className="div-hero-image relative">
 
       <img 
-      src="/foto-Hero.PNG" 
+      src="/foto-portada.jpg" 
       alt="Hero"
       className="hero-img"
       />
+
+      {/* Imagen blur para el fondo extendido */}
+        <div 
+          className="image-blur"
+        ></div>
 
        <div className="overlay"></div>
 
@@ -31,13 +36,13 @@ const Hero = () => {
               Lorem ipsum
             </h1> */}
             <div className='title-container'>
-              <p className='text-lg sm:text-xl lg:text-4xl tracking-wider text-white/90 max-w-2xl font-bold'>
-                Consultoría estratégica <br />
+              <p className=' drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] text-lg sm:text-2xl lg:text-4xl tracking-wider text-white/90 max-w-2xl font-bold'>
+                Consultoría estratégica 
                  y sistémica en factores humanos
               </p>
               
             </div>
-            <div className="-mb-2">
+            <div className="button-hero">
                 <Button
                 size="lg"
                 variant="outline"

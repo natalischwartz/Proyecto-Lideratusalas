@@ -30,7 +30,7 @@ export default function EjesAbordaje() {
     <section className="w-full max-w-3xl mx-auto px-6 py-5 container">
       <div className="w-full max-w-7xl mx-auto px-6 py-5">
         {/* Título centrado */}
-        <h2 className="text-center text-3xl font-semibold text-foreground mb-12">
+        <h2 className="text-center text-2xl font-semibold text-foreground mb-12 font-['Playfair_Display'] tracking-wide">
           Ejes de abordaje
         </h2>
       </div>
