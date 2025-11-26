@@ -2,7 +2,7 @@
 import nodemailer from "nodemailer";
 
 export default async function sendMail(req, res) {
-  const { name, email, message, phone } = req.body;
+  const { nombre, email, mensaje, telefono } = req.body;
 
   try {
     const transporter = nodemailer.createTransport({
@@ -23,10 +23,10 @@ export default async function sendMail(req, res) {
       to: process.env.EMAIL_TO,
       subject: "Nuevo mensaje desde la web",
       text: `
-Nombre: ${name}
+Nombre: ${nombre}
 Email: ${email}
-Teléfono: ${phone}
-Mensaje: ${message}
+Teléfono: ${telefono}
+Mensaje: ${mensaje}
 `,
     };
 
