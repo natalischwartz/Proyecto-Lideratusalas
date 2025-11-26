@@ -19,7 +19,7 @@ const About = () =>{
     {
       image: photo3,
       title: "Valeria V. Pereyra",
-      description: "Consultora psicológica | Posgrado en Desarrollo Personal |Estudiante avanzada de Psicología en la U.B.A | Instructora en Factores Humanos y CRM - SMS| Curso de Investigación de accidentes | Profesora en la Universidad Provincial de Ezeiza",
+      description: "Consultora psicológica | Posgrado en Desarrollo Personal | Estudiante avanzada de Psicología en la U.B.A | Instructora en Factores Humanos y CRM - SMS | Curso de Investigación de accidentes | Profesora en la Universidad Provincial de Ezeiza",
     },
   ];
 
