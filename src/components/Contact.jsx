@@ -45,7 +45,7 @@ const Contact = () => {
   setIsSubmitting(true);
 
      try {
-    const response = await fetch('/api/send-email', {
+    const response = await fetch('http://localhost:3001/send-email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -59,6 +59,7 @@ const Contact = () => {
     });
 
     const data = await response.json();
+
 
     if (data.success) {
       toast({
