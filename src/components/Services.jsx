@@ -1,33 +1,33 @@
-import { Lightbulb, Cog, Target } from "lucide-react";
+import { Lightbulb, Cog, Target, PlaneIcon } from "lucide-react";
 import EjesAbordaje from "./EjesDeAbordaje";
 import {Card} from "@/components/ui/card";
 
  const services = [
+    // {
+    //   icon: Lightbulb,
+    //   title: "Qué Ofrecemos",
+    //   color: "from-accent to-accent-light",
+    //   items: [
+    //     "Consultoría de RR.HH y empresarial",
+    //     "Coaching para la vida",
+    //     "Desarrollo de liderazgo",
+    //     "Mentoring profesional personalizado",
+    //     "Preparación de entrevistas",
+    //     "Gestión del cambio organizacional",
+    //     "Formación de directivos"
+    //   ],
+    // },
     {
-      icon: Lightbulb,
-      title: "Qué Ofrecemos",
-      color: "from-accent to-accent-light",
-      items: [
-        "Consultoría de RR.HH y empresarial",
-        "Coaching para la vida",
-        "Desarrollo de liderazgo",
-        "Mentoring profesional personalizado",
-        "Preparación de entrevistas",
-        "Gestión del cambio organizacional",
-        "Formación de directivos"
-      ],
-    },
-    {
-      icon: Cog,
-      title: "Cómo Trabajamos",
+      icon: PlaneIcon,
+      title: "Cómo Trabajamos en Lidera Tus Alas",
       color: "from-primary to-primary-light",
       items: [
-        "Diagnóstico inicial exhaustivo",
-        "Diseño de estrategias personalizadas",
-        "Implementación con acompañamiento continuo",
-        "Medición de resultados y ajustes",
-        "Sesiones one-on-one y grupales",
-        "Seguimiento y evaluación constante",
+        "1.Diagnóstico Inicial",
+        "2.Diseño a Medida",
+        "3.Metodologías Prácticas",
+        "4.Gestión y Seguimiento de los Procesos",
+        "5.Integración en el Día a Día",
+        "6.Evaluación y Mejora Continua",
       ],
     },
     {

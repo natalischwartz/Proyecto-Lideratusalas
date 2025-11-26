@@ -19,13 +19,13 @@ const About = () =>{
     {
       image: photo3,
       title: "Valeria V. Pereyra",
-      description: "Lic. en Psicología | Consultora psicológica | Especialización en Desarrollo Personal | Facilitadora en FF.HH. | Comisario de a bordo - Area internacional | Consultoría de FF.HH y Gestión de la seguridad.",
+      description: "Consultora psicológica | Posgrado en Desarrollo Personal |Estudiante avanzada de Psicología en la U.B.A | Instructora en Factores Humanos y CRM - SMS| Curso de Investigación de accidentes | Profesora en la Universidad Provincial de Ezeiza",
     },
   ];
 
 
      return (
-    <section id="about" className="py-16 sm:py-24 bg-gradient-subtle " data-aos="fade-right">
+    <section id="about" className="py-8 sm:py-24 bg-gradient-subtle " data-aos="fade-right">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-['Playfair_Display'] text-foreground mb-4">
