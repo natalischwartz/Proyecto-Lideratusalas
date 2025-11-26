@@ -44,8 +44,9 @@ const Contact = () => {
   e.preventDefault();
   setIsSubmitting(true);
 
+
      try {
-    const response = await fetch('http://localhost:3001/send-email', {
+    const response = await fetch('../../backend/send-mail', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
