@@ -32,20 +32,20 @@ const Hero = () => {
             <div className='title-container'>
               <p className='text-lg sm:text-2xl lg:text-4xl tracking-wider text-white/90 max-w-2xl font-bold'>
                 Consultoría estratégica 
-                 y sistémica en factores humanos
+                 y sistémica en Factores Humanos
               </p>
               
             </div>
             <div >
                 <Button
-                className="button-hero"
-                size="lg"
+                className="button-hero border-white hover:text-primary transition-smooth text-base sm:text-lg px-6 sm:px-8 py-6 sm:py-7"
+                size="default"
                 variant="outline"
                 onClick={() => {
                   const element = document.getElementById("services");
                   if (element) element.scrollIntoView({ behavior: "smooth" });
                 }}
-                id="border-2 border-white text- hover:bg-white hover:text-primary transition-smooth text-base sm:text-lg px-6 sm:px-8 py-6 sm:py-7"
+                id=""
               >
                 Nuestros Servicios
               </Button>

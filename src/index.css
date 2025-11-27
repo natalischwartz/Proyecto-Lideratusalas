@@ -178,28 +178,26 @@
     color: #151D54;
     /* font-family: 'Playfair Display', serif; */
     letter-spacing:0.04em;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+    /* padding-top: 1.25rem;
+    padding-bottom: 1.25rem; */
     text-align:center;
+    margin:unset;
 }
 
   .button-hero{
   font-weight:400;
-  border: 1px solid #151D54 ;
+  /* border: 1px solid #151D54 ; */
   border-radius: 8px;
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
-  display: inline-block;
   text-align: center;
-   color:#151D54;
+  background-color:#151D54;
+  color:white;
   }
 
-  .button-hero:hover{
-    color:white;
-  }
 
     [data-aos]:not(.ejes-animados):not(.ejes-animados *) {
     opacity: 1 !important;

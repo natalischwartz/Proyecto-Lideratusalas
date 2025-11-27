@@ -22,12 +22,12 @@ import {Card} from "@/components/ui/card";
       title: "Cómo Trabajamos en Lidera Tus Alas",
       color: "from-primary to-primary-light",
       items: [
-        "1.Diagnóstico Inicial",
-        "2.Diseño a Medida",
-        "3.Metodologías Prácticas",
-        "4.Gestión y Seguimiento de los Procesos",
-        "5.Integración en el Día a Día",
-        "6.Evaluación y Mejora Continua",
+        "Diagnóstico Inicial",
+        "Diseño a Medida",
+        "Metodologías Prácticas",
+        "Gestión y Seguimiento de los Procesos",
+        "Integración en el Día a Día",
+        "Evaluación y Mejora Continua",
       ],
     },
     {
