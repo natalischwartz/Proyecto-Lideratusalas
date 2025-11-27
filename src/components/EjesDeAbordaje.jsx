@@ -51,7 +51,7 @@ export default function EjesAbordaje() {
                 {/* Burbuja */}
                 <span className="absolute -left-10 top-1 w-5 h-5 bg-[#1E2A78] rounded-full ring-4 ring-white shadow-md"></span>
 
-                <h3 className="text-lg font-semibold text-[#1C2434]">
+                <h3 className="text-lg text-ejes font-semibold text-[#1C2434]">
                   {item.title}
                 </h3>
                 <p className="text-gray-600">{item.desc}</p>

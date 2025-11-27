@@ -74,35 +74,35 @@ const Navbar = () => {
             <Button
               variant="ghost"
               onClick={() => scrollToSection("hero")}
-              className="text-foreground hover:text-primary transition-smooth"
+              className="text-foreground text-base hover:text-primary transition-smooth"
             >
               Inicio
             </Button>
             <Button
               variant="ghost"
               onClick={() => scrollToSection("about")}
-              className="text-foreground hover:text-primary transition-smooth"
+              className="text-foreground text-base hover:text-primary transition-smooth"
             >
               Quiénes somos
             </Button>
             <Button
               variant="ghost"
-              onClick={() => scrollToSection("lista-servicios")}
-              className="text-foreground hover:text-primary transition-smooth"
+              onClick={() => scrollToSection("services")}
+              className="text-foreground text-base hover:text-primary transition-smooth"
             >
               Servicios
             </Button>
             <Button
               variant="ghost"
               onClick={() => scrollToSection("testimonials")}
-              className="text-foreground hover:text-primary transition-smooth"
+              className="text-foreground text-base hover:text-primary transition-smooth"
             >
               Nuestros clientes 
             </Button>
             {/* Botón de Contacto destacado */}
             <Button
               onClick={() => scrollToSection("contact")}
-              className="ml-4 bg-gradient-to-r from-foreground to-primary hover:shadow-medium transition-smooth"
+              className="ml-4 bg-gradient-to-r text-base from-foreground to-primary hover:shadow-medium transition-smooth"
             >
               Contacto
             </Button>
@@ -131,34 +131,34 @@ const Navbar = () => {
                   {/* Links del menú móvil - Todos llaman a scrollToSection y cierran el menú */}
                   <Button
                     variant="ghost"
-                    className="w-full justify-start"
+                    className="w-full justify-start text-base"
                     onClick={() => scrollToSection("hero")}
                   >
                     Inicio
                   </Button>
                   <Button
                     variant="ghost"
-                    className="w-full justify-start"
+                    className="w-full justify-start text-base"
                     onClick={() => scrollToSection("about")}
                   >
                     Quiénes somos
                   </Button>
                   <Button
                     variant="ghost"
-                    className="w-full justify-start"
-                    onClick={() => scrollToSection("lista-servicios")}
+                    className="w-full justify-start text-base"
+                    onClick={() => scrollToSection("services")}
                   >
                     Servicios
                   </Button>
                   <Button
                     variant="ghost"
-                    className="w-full justify-start"
+                    className="w-full justify-start text-base"
                     onClick={() => scrollToSection("testimonials")}
                   >
                     Nuestros clientes
                   </Button>
                   <Button
-                    className="w-full bg-gradient-to-r from-foreground to-primary mt-4"
+                    className="w-full bg-gradient-to-r text-base from-foreground to-primary mt-4"
                     onClick={() => scrollToSection("contact")}
                   >
                     Contacto
