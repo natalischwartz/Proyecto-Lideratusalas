@@ -13,24 +13,24 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className=" relative z-5 min-h-screen overflow-hidden sm:pt-24">
+    <section id="hero" className="container-fluid z-5 overflow-hidden">
       {/* Background Image with Overlay */}
-      <div className="div-hero-image relative">
+      <div className="div-hero-image">
           <img 
           src="/hero-image.png" 
           alt="Hero"
           className="hero-img"
           />
 
-       <div className="overlay"></div>
+          <div className="overlay"></div>
 
          {/*  Hero Content */}
-      <div className="max-w-3xl content px-5  lg:px-8 z-10">
+          <div className="max-w-3xl content px-5  lg:px-8 z-10">
             {/* <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-['Playfair_Display'] text-white mb-4">
               Lorem ipsum
             </h1> */}
             <div className='title-container'>
-              <p className='text-lg sm:text-2xl lg:text-4xl tracking-wider text-white/90 max-w-2xl font-bold'>
+              <p className='text-lg sm:text-4xl lg:text-4xl tracking-wider text-white/90 max-w-2xl font-bold'>
                 Consultoría estratégica 
                  y sistémica en Factores Humanos
               </p>
